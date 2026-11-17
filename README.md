@@ -9,6 +9,26 @@ A minimal, fast Android launcher (Kotlin + Jetpack Compose).
 
 Gestures: swipe up to search, swipe down for notifications, long-press an app for pin / app info / uninstall.
 
+## Screenshots
+
+| Text | Icon + text | Icons |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/home_text.jpg" width="240"> | <img src="docs/screenshots/home_icons.jpg" width="240"> | <img src="docs/screenshots/home_grid.jpg" width="240"> |
+
+| Centered, large, 24h, light dim | Daily wallpaper (random photo) | Long-press an app |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/home_centered.jpg" width="240"> | <img src="docs/screenshots/home_wallpaper.jpg" width="240"> | <img src="docs/screenshots/menu.jpg" width="240"> |
+
+**Search** — typing `ma` narrows to Gmail and Maps (matched letters in bold, shortcut labels on the right); one more letter opens the app.
+
+<img src="docs/screenshots/search.jpg" width="480">
+
+**Settings** — long-press empty space on the home screen.
+
+| Home apps & pins | Clock, prices, calendar | Wallpaper & system |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/settings_home.png" width="240"> | <img src="docs/screenshots/settings_widgets.png" width="240"> | <img src="docs/screenshots/settings_wallpaper.png" width="240"> |
+
 ## Build
 
 Requires JDK 17 and the Android SDK (minSdk 29, targetSdk 36).

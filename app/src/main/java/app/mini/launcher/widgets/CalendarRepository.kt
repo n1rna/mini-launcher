@@ -43,7 +43,8 @@ class CalendarRepository(private val context: Context) {
         val out = ArrayList<CalEvent>()
         context.contentResolver.query(
             uri, projection,
-            "${Instances.VISIBLE} = 1 AND ${Instances.STATUS} != ${Instances.STATUS_CANCELED}",
+            // STATUS is often NULL (local/imported calendars); NULL != x is not true in SQL
+            "${Instances.VISIBLE} = 1 AND (${Instances.STATUS} IS NULL OR ${Instances.STATUS} != ${Instances.STATUS_CANCELED})",
             null, "${Instances.BEGIN} ASC",
         )?.use { c ->
             val tzOffset = java.util.TimeZone.getDefault().getOffset(now)
